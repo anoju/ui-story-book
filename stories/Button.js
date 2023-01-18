@@ -1,21 +1,35 @@
 import './assets/css/front.min.css';
 
 export const createButton = ({
-  primary = false,
+  line,
+  round,
+  tag,
+  btnColor,
   size,
-  backgroundColor,
   label,
   onClick,
 }) => {
-  const btn = document.createElement('button');
-  btn.type = 'button';
+  let btn;
+  if(tag === 'a'){
+    btn = document.createElement('a');
+    btn.href = '#';
+    btn.role = 'button';
+  }else{
+    btn = document.createElement('button');
+    btn.type = 'button';
+  }
   btn.innerText = label;
-  btn.addEventListener('click', onClick);
+  btn.addEventListener('click', function(e){
+    if(tag === 'a') e.preventDefault();
+    if(!!onClick) onClick();
+  });
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  btn.className = ['button', size, mode].join(' ');
-
-  btn.style.backgroundColor = backgroundColor;
+  const classAray= ['button'];
+  if(btnColor && btnColor !== 'defalut') classAray.push(btnColor);
+  if(size && size !== 'defalut') classAray.push(size);
+  if(line) classAray.push('line');
+  if(round) classAray.push('round');
+  btn.className = classAray.join(' ');
 
   return btn;
 };
