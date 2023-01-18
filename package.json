@@ -28,8 +28,13 @@
     "@storybook/builder-webpack4": "^6.5.15",
     "@storybook/html": "^6.5.15",
     "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-library": "0.0.13",
-    "babel-loader": "^8.3.0"
+    "babel-loader": "^8.3.0",
+    "css-loader": "5.2.6",
+    "sass": "^1.57.1",
+    "sass-loader": "10.1.1",
+    "style-loader": "2.0.0"
   },
   "dependencies": {}
 }

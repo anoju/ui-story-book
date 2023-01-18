@@ -1,0 +1,466 @@
+// 투자
+//투자 메인배너
+.invest-banner-wrap {
+  background: #f1f1f1;
+  @include outer;
+  overflow: hidden;
+  .img-box {
+    &:before {
+      padding-top: -WH-ratio(360, 208);
+    }
+  }
+
+  .swiper-pagination:not(.swiper-pagination-fraction) {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    .swiper-pagination-bullet {
+      background: #c2c2c2;
+      opacity: 1;
+      &.swiper-pagination-bullet-active {
+        background: var(--primary-color);
+      }
+    }
+  }
+}
+
+.invest-info-guide {
+  @include outer;
+  position: relative;
+  padding: 1.1rem 4.5rem 1.1rem var(--base-padding);
+  font-size: 1.4rem;
+  background-color: #fafafa;
+  > span {
+    font-size: 1.2rem;
+  }
+  .button {
+    position: absolute;
+    top: 50%;
+    right: 1.9rem;
+    margin-top: -1.2rem;
+  }
+}
+// 배너박스
+.invest-banner-box {
+  .inner {
+    position: relative;
+    height: 100%;
+    display: block;
+    padding: 1.6rem 10rem 1.7rem 2rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.08);
+    color: var(--strong-txt-color2);
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 9.1rem;
+      @include bg-etc(9.1rem auto, right bottom);
+      background-image: url(../images/MDA/ico-invest_art.png);
+      transform: translateX(100%);
+      transition: transform 0.5s;
+    }
+  }
+  &.on .inner:before {
+    transform: translateX(0);
+  }
+  .tit {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+  .txt {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-top: 0.4rem;
+  }
+}
+.invest-content {
+  margin-top: 4.8rem;
+  &:last-child {
+    padding-bottom: 4rem;
+  }
+  > div + div {
+    margin-top: 4.8rem;
+  }
+}
+
+//서브 타이틀
+.invest-tit-sub {
+  font-size: 1.5rem;
+  margin-top: 0.4rem;
+}
+
+// 투자 메인 swiper
+.invest-card-list {
+  margin-top: 0.4rem;
+  &.swiper-items {
+    .swiper {
+      // padding: 0 1.6rem;
+      padding: 0 calc(var(--base-padding) - 0.8rem);
+      margin-bottom: -2rem;
+    }
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      overflow: visible;
+      padding: 2rem 0;
+      a {
+        width: 23.2rem;
+        margin: 0 0.8rem;
+      }
+    }
+  }
+
+  .swiper-slide > a {
+    position: relative;
+    display: block;
+    height: 100%;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.08);
+    border-radius: 1.6rem;
+    background: #fff;
+  }
+  .list-item + .list-item {
+    margin-top: 2rem;
+  }
+  .item {
+    display: block;
+  }
+  .img-box {
+    // height: 17.6rem;
+    overflow: hidden;
+    border-radius: 1.6rem 1.6rem 0 0;
+    position: relative;
+    &:before {
+      // padding-top: -WH-ratio(232, 164);
+      padding-top: -WH-ratio(232, 174);
+    }
+  }
+  .invest-txt-box {
+    padding: 1.6rem 1.6rem 1.8rem;
+    // min-height: 12.8rem;
+  }
+
+  &.type2 {
+    margin-top: 1.4rem;
+    &.swiper-items {
+      .swiper {
+        padding: 0 calc(var(--base-padding) - 1rem);
+        margin-bottom: 0;
+      }
+    }
+    .swiper-slide {
+      padding: 0;
+      > a {
+        width: 18.8rem;
+        padding: 1rem 1rem 0;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        text-align: center;
+      }
+    }
+    .img-box {
+      border-radius: 1.6rem;
+      border: 0.8rem solid #fff;
+      width: 16.8rem;
+      // height: 16.8rem;
+      background-color: #fff;
+      box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.08);
+      &:before {
+        padding-top: 100%;
+      }
+      &:after {
+        content: none;
+      }
+      // img {
+      //   padding: 0.8rem;
+      //   border-radius: 1.6rem;
+      // }
+    }
+    .invest-txt-box {
+      padding: 0.8rem 0 0;
+      min-height: auto;
+    }
+    .txt {
+      color: #808892;
+      margin-top: 0.8rem;
+    }
+    .invest-info {
+      left: auto;
+      bottom: auto;
+      position: relative;
+      min-height: auto;
+      padding: 0;
+      margin-top: 0.4rem;
+      justify-content: center;
+      background: none;
+    }
+  }
+
+  &.type3 {
+    // .img-box {
+    //   &:before {
+    //     padding-top: -WH-ratio(232, 174);
+    //   }
+    // }
+    .invest-txt-box {
+      .invest-state2 {
+        margin-top: 0.4rem;
+        + .tit {
+          margin-top: 0.8rem;
+        }
+      }
+      .tit {
+        margin-top: 2.3rem;
+        &:last-child {
+          margin-bottom: 0.6rem;
+        }
+        + .invest-date {
+          margin-top: 1.2rem;
+        }
+      }
+      .invest-date {
+        &:last-child {
+          margin-bottom: 0.6rem;
+        }
+      }
+    }
+  }
+}
+.invest-txt-box {
+  .tit {
+    // padding: 0 1.6rem;
+    height: 4.6rem;
+    line-height: 2.3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--strong-txt-color);
+    @include ellipsis(2);
+  }
+  .txt {
+    // padding: 0 1.6rem;
+    margin-top: 0.4rem;
+    height: 4rem;
+    line-height: 2rem;
+    color: #818892;
+    font-size: 1.4rem;
+    font-weight: 400;
+    @include ellipsis(2);
+  }
+  .price {
+    margin-top: 0.8rem;
+    padding: 1.2rem;
+    min-height: 6.4rem;
+    font-size: 1.6rem;
+    background-color: #fafafa;
+    border-radius: 0.8rem;
+    text-align: right;
+    span {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      display: block;
+      color: #818892;
+    }
+    strong.won {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: var(--strong-txt-color);
+      text-align: right;
+      &:first-child {
+        padding-top: 1.6rem;
+      }
+      span {
+        @include text-blind;
+        display: inline-block;
+        width: 1.6rem;
+        height: 1rem;
+        margin-right: 0.6rem;
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 1L5.4625 11L9.0625 3.28125L12.5375 11L15 1M4 5H1M17 5H14' stroke='%23808892' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}
+
+.invest-state {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.4rem 0.7rem;
+  max-width: calc(100% - 2.4rem);
+  left: 1.2rem;
+  top: 1.2rem;
+  color: #fff;
+  border-radius: 0.8rem;
+  font-weight: 400;
+  @include dimm;
+  @include ellipsis;
+  text-shadow: 0 0 5px #000;
+}
+.invest-state2 {
+  // color: #818892;
+  color: #424242;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  @include ellipsis;
+}
+
+.invest-date {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #b0b0b0;
+}
+// 투자 뱃지
+.invest-info {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #b0b0b0;
+  span {
+    max-width: 100%;
+    @include ellipsis(1);
+    &.info {
+      padding: 0 0.5rem;
+      line-height: 1.7rem;
+      border-radius: 1rem;
+      border: 0.1rem solid #c2c2c2;
+      margin: 0.4rem 0.4rem 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .img-box & {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    align-items: flex-end;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: #fff;
+    span {
+      border-color: #fff;
+    }
+  }
+  .invest-card-list .img-box & {
+    min-height: 7.2rem;
+    padding: 1.2rem;
+  }
+  .invest-item-list .img-box & {
+    position: absolute;
+    min-height: 4.5rem;
+    padding: 1rem;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    span {
+      margin: 0;
+    }
+  }
+}
+
+// k-컨텐츠 리스트
+.invest-item-list {
+  li {
+    & + li {
+      margin-top: 1.6rem;
+    }
+    &.open {
+      // .item {
+      //   background: rgba(var(--primary-color-rgb), 0.1);
+      // }
+      .tit {
+        color: var(--primary-color);
+      }
+    }
+  }
+  .item {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.08);
+    border-radius: 1.2rem;
+    background: #fff;
+  }
+  .img-box {
+    flex: 0 0 auto;
+    width: 15.2rem;
+    // height: 11.4rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    &:before {
+      padding-top: -WH-ratio(152, 114);
+    }
+  }
+  .invest-txt-box {
+    overflow: hidden;
+    flex: 1 1 auto;
+    padding: 1.6rem;
+    .tit {
+      color: var(--strong-txt-color2);
+      &.h-46 {
+        + .invest-info {
+          margin-top: 1.7rem;
+        }
+      }
+    }
+    .invest-state2 + .tit.h-46 {
+      margin-top: 0.4rem;
+      + .invest-info {
+        margin-top: 1rem;
+      }
+    }
+    .invest-info {
+      position: relative;
+      margin-top: 1.1rem;
+    }
+  }
+  // .txt {
+  //   margin-top: 0.2rem;
+  // }
+  .folding-panel {
+    display: none;
+    @include outer;
+    margin-top: 1.6rem;
+  }
+  &.type2 {
+    .img-box {
+      &:before {
+        padding-top: -WH-ratio(152, 161);
+      }
+    }
+  }
+}
+
+// 배너 리스트
+.invest-banner-list {
+  li {
+    .img-box {
+      // border-radius: 1.2rem;
+      border-radius: #{(12 / 360 * 100)}vw;
+      @include media-min-width(1024) {
+        border-radius: 3.4rem;
+      }
+      &:before {
+        padding-top: -WH-ratio(312, 80);
+      }
+    }
+    + li {
+      margin-top: 0.8rem;
+    }
+  }
+}

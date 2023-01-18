@@ -1,0 +1,95 @@
+.main {
+  #header > div,
+  .page-head > div {
+    height: 5rem;
+  }
+  #container:first-child,
+  .page-body:first-child {
+    padding-top: 0;
+  }
+  html.ios & {
+    #container:first-child,
+    .page-body:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+// 메인이벤트 팝업
+.popup.pop-event {
+  .pop-wrap {
+    border-top-width: 0 !important;
+  }
+  .pop-body {
+    padding: 0 !important;
+  }
+  .pop-foot {
+    line-height: 1.1;
+    > div {
+      padding: 2.2rem var(--base-padding);
+    }
+  }
+  .btn-today {
+    i {
+      margin-right: 1.5rem;
+    }
+  }
+  .btn-close {
+    font-weight: 500;
+    color: var(--strong-txt-color);
+    border-bottom: 0.1rem solid var(--strong-txt-color);
+  }
+}
+
+.floating-menu-bar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: -0.1rem;
+  right: -0.1rem;
+  max-width: 102.6rem;
+  z-index: 40;
+  padding: 0 1rem;
+  border-radius: 2.4rem 2.4rem 0 0;
+  border: 0.1rem solid #ebebeb;
+  border-bottom-width: 0;
+  background: #fff;
+  a {
+    width: 100%;
+    height: 6rem;
+    padding-top: 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #979797;
+    align-items: center;
+    line-height: 1.7rem;
+    @include is-native;
+    &.on {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  @include class-begins('i-ico-') {
+    display: block;
+    margin: 0 auto 0.1rem;
+  }
+  .lottie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include class-begins('i-ico-', '+') {
+      display: none;
+    }
+  }
+  i {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 0.1rem;
+  }
+  // .lottie {
+  //   display: none;
+  // }
+  @include media-min-width(1024) {
+    @include web-center-fixed;
+  }
+}
