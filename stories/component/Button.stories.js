@@ -7,22 +7,22 @@ export default {
   argTypes: {
     tag: {
       control: { type: 'select' },
-      options: ['button', 'a'],
+      options: ['button', 'a']
     },
     line: { control: 'boolean' },
     round: { control: 'boolean' },
     btnColor: {
       control: { type: 'select' },
-      options: ['defalut', 'primary', 'gray', 'gray2', 'gray3'],
+      options: ['defalut', 'primary', 'gray', 'gray2', 'gray3']
     },
     label: { control: 'text' },
     onClick: { action: 'onClick' },
     size: {
       control: { type: 'select' },
-      options: ['defalut', 'h24', 'h32', 'h38', 'h52', 'h60'],
+      options: ['defalut', 'h24', 'h32', 'h38', 'h52', 'h60']
     },
-    disabled: { control: 'boolean' },
-  },
+    disabled: { control: 'boolean' }
+  }
 };
 
 // More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
@@ -41,9 +41,8 @@ Defalut.args = {
   round: false,
   disabled: false,
   tag: 'button',
-  label: '기본 버튼',
+  label: '기본 버튼'
 };
-
 
 export const line = Template.bind({});
 line.args = {
@@ -53,7 +52,7 @@ line.args = {
   round: false,
   disabled: false,
   tag: 'button',
-  label: '라인 버튼',
+  label: '라인 버튼'
 };
 
 export const round = Template.bind({});
@@ -64,5 +63,5 @@ round.args = {
   round: true,
   disabled: false,
   tag: 'button',
-  label: '라운드 버튼',
+  label: '라운드 버튼'
 };

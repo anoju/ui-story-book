@@ -5,8 +5,8 @@ export default {
   title: 'Example/Page',
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/html/configure/story-layout
-    layout: 'fullscreen',
-  },
+    layout: 'fullscreen'
+  }
 };
 
 const Template = () => createPage();
