@@ -1,4 +1,4 @@
-import './assets/css/page.css';
+import '../assets/css/page.css';
 import { createHeader } from './Header';
 
 export const createPage = () => {

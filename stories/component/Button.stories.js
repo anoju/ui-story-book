@@ -2,7 +2,7 @@ import { createButton } from './Button';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Component/Button',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     tag: {
@@ -21,6 +21,7 @@ export default {
       control: { type: 'select' },
       options: ['defalut', 'h24', 'h32', 'h38', 'h52', 'h60'],
     },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -31,13 +32,14 @@ const Template = ({ label, ...args }) => {
   return createButton({ label, ...args });
 };
 
-export const Primary = Template.bind({});
+export const Defalut = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
-Primary.args = {
+Defalut.args = {
   btnColor: 'primary',
   size: 'defalut',
   line: false,
   round: false,
+  disabled: false,
   tag: 'button',
   label: '기본 버튼',
 };
@@ -49,6 +51,7 @@ line.args = {
   size: 'defalut',
   line: true,
   round: false,
+  disabled: false,
   tag: 'button',
   label: '라인 버튼',
 };
@@ -59,6 +62,7 @@ round.args = {
   size: 'defalut',
   line: true,
   round: true,
+  disabled: false,
   tag: 'button',
   label: '라운드 버튼',
 };

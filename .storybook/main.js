@@ -6,7 +6,9 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@storybook/preset-scss"
   ],
-  "framework": "@storybook/html"
+  "framework": "@storybook/html",
+  "staticDirs": ["../public"],
 }

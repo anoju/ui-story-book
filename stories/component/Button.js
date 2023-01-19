@@ -1,4 +1,4 @@
-import './assets/css/front.min.css';
+import '../assets/css/front.min.css';
 
 export const createButton = ({
   line,
